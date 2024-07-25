@@ -1,0 +1,43 @@
+.footer-wrapper{
+    height: 300px;
+    width: 100%;
+}
+.footer{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    background-image: url('/assets/Kurbs\ footer.png');
+}
+.container-flex{
+    height: 100%;
+    width: 100%;
+    /* align-items: flex-start !important; */
+    gap: 30px;
+}
+.flex-items{
+    height: 250px;
+    width: 200px;
+}
+.flex-items ul,li,a{
+    margin: 5px 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
+
+.box-logo{
+    height: 200px;
+    width: 200px;
+    background-image: url('/assets/Kurbs\ Logo.png');
+    background-size: contain;
+}
+.logo-m{
+    height: 30px;
+    width: 30px;
+}
+.logo-m image{
+    height: 30px;
+    width: 30px;
+}

@@ -1,0 +1,40 @@
+<%-include('partials/header.ejs') %> <%-include('partials/navbar.ejs') %>
+<div class="container-grid">
+  <div class="grid-item">
+    <div class="form-container flex-center">
+        <h1>New Product</h1>
+      <form action="/add/product" method="post" enctype="multipart/form-data">
+        <div class="input-box">
+          <label for="pname">Product Name:</label>
+          <input type="text" name="pname" id="pname" required />
+        </div>
+        <div class="input-box">
+          <label for="pdesc">Product Description:</label>
+          <!-- <input type="text" name="pdesc" id="pdesc" required /> -->
+           <textarea name="pdesc" id="pdesc" required></textarea>
+        </div>
+        <div class="input-box">
+          <label for="pprice">Product Price:</label>
+          <input type="number" name="pprice" id="pprice" required />
+        </div>
+        <div class="input-box">
+          <label for="image">Product Image:</label>
+          <input
+            type="file"
+            name="image"
+            id="image"
+            accept="image/*"
+            required
+          />
+        </div>
+        <div class="input-box">
+          <input type="submit" value="Add Product" />
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="grid-item">
+    <div class="grid-item-banner"></div>
+  </div>
+</div>
+<%-include('partials/footer.ejs') %>

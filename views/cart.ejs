@@ -1,0 +1,47 @@
+<%-include('partials/header.ejs')%> <%-include('partials/navbar.ejs')%>
+<div class="table-container-wrapper">
+  <div class="table-container">
+    <%if(items.length > 0 ){%>
+    <table>
+      <tr>
+        <th>Product Name</th>
+        <th>Product Price</th>
+        <th>Product quantity</th>
+        <th>Total</th>
+        <th>Action</th>
+      </tr>
+      <%items.forEach((product)=>{ %>
+        <tr>
+            <td><%=product.name %></td>
+            <td><%=product.price %></td>
+            <td>
+                <form action="/cart/update" method="post">
+                    <input type="hidden" name="cart_item_id" value="<%=product.cart_item_id%>">
+                    <input type="number" name="quantity" id="quantity" value="<%=product.quantity %>" min="1">
+                    <button type="submit">✅</button>
+                </form>
+            </td>
+            <td><%=product.price * product.quantity %></td>
+            <td><form action="/cart/delete" method="post"> 
+                <input type="hidden" name="cart_item_id" value="<%=product.cart_item_id %>">
+                <button type="submit">❌</button></td>
+            </form>
+        </tr>
+      <% }) %>
+    </table>
+    <div class="display-total">
+        <div class="display-box">
+            <h3>Total: Rs <%=total%></h3>
+        </div>
+        <form action="/checkout" method="post">
+            <input type="submit" value="Make Payment Rs <%=total%>" id="mpButton">
+        </form>
+    </div>
+    <% }else{%>
+        <div class="empty-img">
+
+        </div>
+    <%} %>
+  </div>
+</div>
+<%-include('partials/footer.ejs')%>

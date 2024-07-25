@@ -1,0 +1,73 @@
+.table-container-wrapper {
+    min-height: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.table-container {
+    width: 60%; /* Adjust as needed */
+    margin: 0 auto;
+    overflow-x: auto; /* For horizontal scroll if needed */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #eeeeee;
+}
+table th{
+    text-align: center!important;
+}
+
+table th {
+    background-color: #160027;
+    color: white;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tr:hover {
+    background-color: #ffffff;
+}
+table td form{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+table td form button{
+    height: 30px;
+    width: 30px;
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+}
+.empty-img{
+    height: 300px;
+    width: 300px;
+    margin: 0 auto;
+    background-image: url('/assets/empty.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#mpButton{
+    height: 60px;
+    background-color: transparent;
+    color: rgb(49, 103, 18);
+    border: 1px solid rgb(49, 103, 18);
+    font-size: 20px;
+    border-radius: 10px;
+}
+#mpButton:hover{
+    background-color: rgb(49, 103, 18);
+    color: white;
+}

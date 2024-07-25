@@ -1,0 +1,27 @@
+<div class="navbar-wrapper">
+  <div class="navbar">
+    <div class="navbar-start flex-center">
+      <div class="heading">
+        <h1><span>Kurbs</span> Cart</h1>
+      </div>
+      <div class="nav-controls">
+        <ul>
+          <li><a href="/home">Home</a></li>
+          <%if(user.role === 'admin'){ %>
+          <li><a href="/product">Add Product</a></li>
+          <%}%>
+          <li><a href="/cart">Cart</a></li>
+          <li><a href="/contact">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="navbar-end flex-center">
+      <div class="profile">
+        <h3>Hi! <%=user.name %></h3>
+      </div>
+      <div class="logout-wrapper">
+        <a href="/logout">Logout</a>
+      </div>
+    </div>
+  </div>
+</div>

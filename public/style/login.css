@@ -1,0 +1,17 @@
+.register-img{
+    height: 400px;
+    width: 400px;
+    background-image: url('/assets/register.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.login-img{
+    height: 400px;
+    width: 400px;
+    background-image: url('/assets/login.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.form-container h1{
+    color: rgb(28, 60, 79);
+}

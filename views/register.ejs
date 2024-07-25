@@ -1,0 +1,36 @@
+<%- include('partials/header.ejs')%>
+<div class="container-grid">
+  <div class="grid-item">
+    <div class="form-container flex-center">
+        <h1>Welcome to Kurbs</h1>
+      <form action="/register" method="post">
+        <div class="input-box">
+          <label for="name">Username</label>
+          <input type="text" name="name" id="name">
+        </div>
+        <div class="input-box">
+          <label for="username">Email</label>
+          <input type="email" name="username" id="username" required />
+        </div>
+        <div class="input-box">
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password" required />
+        </div>
+        <div class="input-box">
+          <label for="role">Select Role</label>
+          <select name="role" id="role">
+            <option value="admin">Admin</option>
+            <option value="customer">Customer</option>
+          </select>
+        </div>
+        <div class="input-box">
+          <input type="submit" value="Register" />
+        </div>
+        <p>Existing User? <a href="/">Login</a></p>
+      </form>
+    </div>
+  </div>
+  <div class="grid-item flex-center">
+    <div class="register-img"></div>
+  </div>
+</div>

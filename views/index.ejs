@@ -1,0 +1,54 @@
+<%-include('partials/header.ejs')%> <%-include('partials/navbar.ejs')%>
+
+<div class="banner-wrapper">
+  <div class="banner flex-center">
+    <div class="search-area flex-center">
+      <h1>Looking for a product?</h1>
+      <form action="/search" method="get">
+        <input
+          type="search"
+          name="psearch"
+          id="psearch"
+          placeholder="Search here"
+        />
+      </form>
+    </div>
+  </div>
+</div>
+<div class="container-wrapper flex-center">
+  <div class="container">
+    <%if(data.length>0){%> <% data.forEach((item)=>{ %>
+
+    <div class="box">
+      <a href="/product/<%=item.id %>">
+        <div class="box-image">
+          <img src="<%= item.image %>" alt="image of the product." />
+        </div>
+      
+      <div class="box-info-area">
+        
+        <div class="box-title"><%= item.name %></div></a>
+        <div class="box-desc"><p><%= item.description %></p></div>
+
+        <div class="flex-sb-container">
+          <div class="box-price">
+            <span class="price-span"><%= item.price %></span>
+          </div>
+          <form action="/cart/add" method="post">
+            <input type="hidden" name="product_id" value="<%= item.id %>" />
+            
+            <div class="addToCart">
+              <input type="number" name="quantity" id="quantity" min="1" value="1">
+              <button type="submit">🛒</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <% })%> <%}else{ %>
+    <p class="flex-center">No Data Found</p>
+    <%}%>
+  </div>
+</div>
+<%-include('partials/footer.ejs')%>

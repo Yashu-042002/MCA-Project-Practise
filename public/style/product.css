@@ -1,0 +1,120 @@
+.container-grid{
+    height: 650px;
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    place-content: center;
+    grid-template-columns: 500px 400px;
+}
+.grid-item{
+    height: 100%;
+    width: 100%;
+}
+.form-container{
+    width: 90%;
+    flex-direction: column;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.input-box{
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+}
+.input-box input[type='email'], 
+input[type='password'],
+input[type='text'], 
+input[type='number']{
+    height: 35px;
+    width: 400px;
+    border: 1px solid rgb(214, 214, 214);
+    border-radius: 5px;
+    padding: 0 5px;
+}
+.input-box select{
+    height: 35px;
+    width: 412px;
+    border: 1px solid rgb(214, 214, 214);
+    border-radius: 5px;
+    padding: 0 5px;
+}
+.input-box-big{
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+}
+textarea{
+    padding: 5px;
+}
+.input-box-big textarea{
+    height: 200px;
+    resize: none;
+    border-radius: 5px;
+}
+#pdesc{
+    resize: none;
+    height: 200px;
+    border: 1px solid rgb(214, 214, 214);
+    border-radius: 5px;
+}
+.input-box input[type='file']{
+    height: 30px;
+}
+.input-box input[type='submit']{
+    height: 40px;
+    font-size: 18px;
+    padding: 0 5px;
+    background-color: transparent;
+    color: rgb(34, 53, 76);
+    border-radius: 5px;
+    border: 1px solid rgb(34, 53, 76);
+}
+.input-box input[type='submit']:hover{
+    transition: .1s ease-in;
+    background-color: rgb(34, 53, 76);
+    
+    color: white;
+}
+.input-box input::file-selector-button{
+    background-color: rgb(41, 43, 85);
+    color: white;
+    border: none;
+    height: 30px;
+    width: 120px;
+}
+#quantity{
+    margin: 0;
+    padding: 0;
+    height: 37px;
+    width: 40px;
+    border-radius: 5px;
+    border: 1px solid rgba(34, 53, 76, 0.078);
+    text-align: center;
+}
+.grid-item-banner{
+    height: 100%;
+    width: 100%;
+    background-image: url('/assets/sbanner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.product-detail-wrapper{
+    width: 100%;
+    min-height: 400px;
+    display: flex;
+    justify-content: flex-start;
+}
+.product-detail{
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+
+}
